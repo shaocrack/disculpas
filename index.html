@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disculpas Especiales</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Querida Compañera</h1>
+            <div class="message-container">
+                <p class="message">Sé que he cometido un error y quiero disculparme de todo corazón.</p>
+            </div>
+            
+            <div id="heart" class="teddy-bear hidden">
+                <img src="img/fod.gif" alt="Oso de peluche tierno">
+            </div>
+            
+            <div id="game" class="game hidden">
+                <h2>Juego</h2>
+                <p>Encuentra los pares</p>
+                <div id="gameArea"></div>
+                <p>Puntuación: <span id="score">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="center-button">
+        <button id="startButton" class="start-button">Comenzar</button>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="audio/fondo1.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        document.addEventListener("click", function() {
+            let audio = document.getElementById("backgroundMusic");
+            audio.currentTime = 5;
+            audio.play();
+        }, { once: true });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
